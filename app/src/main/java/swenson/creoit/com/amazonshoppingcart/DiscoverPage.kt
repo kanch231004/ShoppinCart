@@ -43,6 +43,10 @@ class DiscoverPage : AppCompatActivity() {
 
         btnNo.setOnClickListener{
 
+            if (etNo.text.toString().isEmpty()) {
+                Toast.makeText(this, "Please enter some value", Toast.LENGTH_SHORT).show();
+                return@setOnClickListener
+            }
            count =  Integer.parseInt(etNo.text.toString())
 
             if (count > 10) {
